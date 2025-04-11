@@ -4,6 +4,7 @@ import BlogPage from '../pages/BlogPage';
 import AboutPage from '../pages/AboutPage';
 import RootLayout from '../layouts/RootLayout';
 import ErrorPage from '../pages/ErrorPage';
+import BlogPostDetail from '../pages/BlogPostDetail';
 
 // Router 설정
 export const router = createBrowserRouter([
@@ -23,6 +24,12 @@ export const router = createBrowserRouter([
       {
         path: 'blog',
         element: <BlogPage />,
+      },
+      {
+        // :postId -> 경로에 붙는 파라미터(/blog/1, /blog/2), 임의로 붙인 이름
+        // blog/ 뒤에 뭐라도 붙어 있으면 이 페이지로 이동하겠다
+        path: 'blog/:postId',
+        element: <BlogPostDetail />,
       },
       {
         path: 'about',
