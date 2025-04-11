@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './MainNav.module.scss';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const MainNav = () => {
   const activateLink = ({
